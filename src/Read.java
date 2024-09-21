@@ -23,12 +23,12 @@ public class Read {
 
 
                     int gray = (int)(0.299 * red + 0.587 * green + 0.114 * blue);
-                    int newPixelColor = (gray << 16) | (gray << 8) | gray; // RGB format
+                    int newPixelColor = (gray << 16) | (gray << 8) | gray;
                     bwImage.setRGB(x, y, newPixelColor);
                 }
             }
 
-            // Save the black and white image
+            //This is creating an error while generating the output file
             ImageIO.write(bwImage, "jpg", new File("path/to/your/output_bw_image.jpg"));
 
             System.out.println("Black and white filter applied successfully!");
